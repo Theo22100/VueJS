@@ -18,15 +18,20 @@
     </div>
 
     <div class="ui main container" id="app">
+
+        <!--
+            Lien
         <a v-bind:href="link">{{ message }}</a>
 
 
         <ul>
-            <li v-for="person in persons">{{person}}</li>
+            Permet de faire une liste de personnes 
+
+            <li v-for="person in persons">{{person}}</li> 
 
         </ul>
 
-
+        -->
 
 
 
@@ -37,13 +42,20 @@
             <a :href="link">{{ message }}</a> 
         -->
 
-        <input type="checkbox" v-model="succes">
+        <input type="checkbox" v-model="cls" :true-value="'success'" :false-value="'error'"> <!-- Avant le changement app.js : v-model="success" -->
 
-        <div class="ui success message" v-if="succes"> <!-- v-show permet-->
+        <div class="ui message" :class="cls"> <!-- Pour le test background app.js avec la fonction style : :style="style()" -->
+
+
+
+            <!-- Autre VueJS : v-if v-else v-show=-->
+            <!-- <div class="ui message" :class="success ? 'success' : 'error'"> -->
+            <!-- Marche aussi avec les objets :class="{success: success, error: !success}-->
+
+
             <i class="close icon" v-on:click="close"> </i> <!-- v-on:click = @click -->
 
-            <p>Bravo enregistrement réussi</br>
-
+            <p>
                 {{ message }}
             </p>
 
