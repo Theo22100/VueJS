@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.5.0/semantic.min.css">
+    <style>
+        .main.container {
+            padding-top: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="ui inverted fixed menu">
+        <div class="header item">Tutoriel</div>
+    </div>
+
+    
+
+    <div class="ui main container" id="app">
+
+        <input type="text" v-salut.a.b.c="message">
+
+        <input type="text" v-model="message">
+
+        {{ message}}
+       
+
+        <!-- Modifieurs
+            @click
+
+             <p>
+                <a href="https://www.google.fr" @click.prevent="demo">Démo</a> 
+            </p>
+            
+            @click.stop   @click.prevent.stop @click.capture @click.self
+
+
+            v-model.
+                lazy -> Ne change pas directement, att qu'on sort du champ
+                numbre -> ne prend que les chiffres (un peu bugué quand on met des lettres)
+                trim -> enleve les espaces
+
+            @keyup="demo"
+                Permet de détecter le nombre de touche en appellant demo
+
+                .space -> détecte le nombre d'espace
+        
+        -->
+
+
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.0/vue.js"></script> <!--Permet d'avoir VueJS-->
+
+    <script src="js/app.js"> </script>
+
+</body>
+
+</html>
